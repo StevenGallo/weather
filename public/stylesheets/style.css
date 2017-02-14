@@ -1,0 +1,112 @@
+#name {
+  font-size: 3rem;
+  color: #bbb; }
+
+#dark-sky {
+  font-size: 1rem; }
+
+#cur-temp {
+  font-size: 10rem; }
+
+@media screen and (min-width: 420px) {
+  #main {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    font-family: 'Roboto Condensed', sans-serif; }
+  #content {
+    height: 40vh;
+    margin-top: 10px;
+    background-color: #bbb; }
+  #hourly {
+    height: 400px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #bbb;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    float: left; }
+  #daily {
+    height: 400px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #bbb;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    float: left; }
+  .hourly {
+    display: inline-block;
+    width: 400px;
+    height: 400px; }
+  .daily {
+    display: inline-block;
+    width: 400px;
+    height: 400px; } }
+
+@media screen and (max-width: 768px) {
+  #main {
+    height: 100vh; }
+  #weather-container {
+    display: flex;
+    align-items: stretch; }
+  #content {
+    flex: 2 0px;
+    order: 2;
+    height: 80vh;
+    margin-top: 10px;
+    background-color: #bbb; }
+  #hourly {
+    order: 1;
+    height: 80vh;
+    margin-top: 10px;
+    background-color: #bbb; }
+  #daily {
+    order: 3;
+    height: 80vh;
+    margin-top: 10px;
+    background-color: #bbb; }
+  .hourly {
+    display: block;
+    height: 20vh; }
+  .daily {
+    display: block;
+    height: 20vh; } }
+
+@media screen and (min-width: 1200px) {
+  #main {
+    height: 100vh; }
+  #weather-container {
+    display: flex;
+    align-items: stretch; }
+  #content {
+    width: 40%;
+    order: 2;
+    height: 80vh;
+    margin-top: 10px;
+    background-color: #bbb; }
+  #hourly {
+    width: 30%;
+    order: 1;
+    height: 80vh;
+    margin-top: 10px;
+    overflow-y: scroll;
+    background-color: #bbb; }
+  #daily {
+    width: 30%;
+    order: 3;
+    height: 80vh;
+    margin-top: 10px;
+    overflow-y: scroll;
+    background-color: #bbb; }
+  .hourly {
+    display: block;
+    height: 20vh;
+    width: 100%; }
+  .daily {
+    display: block;
+    height: 20vh;
+    width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */

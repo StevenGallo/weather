@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title></title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+   </head>
+   <body>
+      <div id="main">
+         <nav class="navbar navbar-inverse">
+            <span id="name">SkyCast</span>
+            <span id="dark-sky">powered by Dark Sky</span>
+            <form class="navbar-form navbar-right" action="/search" method="GET" role="search">
+               <div class="form-group">
+                  <input type="text" class="form-control" name="address" placeholder="Search">
+               </div>
+               <button type="submit" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+            </form>
+         </nav>
+         <div id="weather-container">
+            <div id="content">
+            <div><%= current.summary %></div>
+            <div id="cur-temp"><%= current.temperature %>&degF</div>
+             <div>Chance of <%if (current.precipType) {%>
+                                <span><%=current.precipType%></span>
+                                  <% } else{ %>  
+                                <span>percipitation</span>
+                                  <% }%>
+                                : <%= Math.floor(100*current.precipProbability) %>%</div>
+            </div>
+            <div id="hourly">
+            <% hourly.data.forEach((hour)=> { %>
+              <div class="hourly">
+                <div><%= moment.unix(hour.time).calendar() %></div>
+                <div><%= hour.summary %></div>
+                <div><%= hour.temperature %></div>
+                <div>Chance of <%if (hour.precipType) {%>
+                                <span><%=hour.precipType%></span>
+                                  <% } else{ %>  
+                                <span>percipitation</span>
+                                  <% }%>
+                                : <%= Math.floor(100*hour.precipProbability) %>%</div>
+              </div>
+            <% }) %>
+            </div>
+            <div id="daily">
+            <% daily.data.forEach((day)=> { %>
+              <div class="daily">
+                <div><%= moment.unix(day.time).format('dddd') %></div>
+                <div><%= day.summary %></div>
+                <div>Low: <%= day.temperatureMin %>&degF</div>
+                <div>High: <%= day.temperatureMax %>&degF</div>
+                <div>Chance of <%if (day.precipType) {%>
+                                <span><%=day.precipType%></span>
+                                  <% } else{ %>  
+                                <span>percipitation</span>
+                                  <% }%>
+                                : <%= Math.floor(100*day.precipProbability) %>%</div>
+              </div>
+            <% }) %>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

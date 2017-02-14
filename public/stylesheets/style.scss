@@ -1,0 +1,140 @@
+$break-small: 420px;
+$break-medium: 768px;
+$break-large: 1200px;
+$element-bgc: #bbb;
+#name {
+    font-size: 3rem;
+    color: $element-bgc;
+}
+
+#dark-sky {
+    font-size: 1rem;
+}
+
+#cur-temp {
+    font-size: 10rem;
+}
+
+@media screen and (min-width: $break-small) {
+    #main {
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+    #content {
+        height: 40vh;
+        margin-top: 10px;
+        background-color: $element-bgc;
+    }
+    #hourly {
+        height: 400px;
+        width: 100%;
+        margin-top: 10px;
+        background-color: $element-bgc;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+        float: left;
+    }
+    #daily {
+        height: 400px;
+        width: 100%;
+        margin-top: 10px;
+        background-color: $element-bgc;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+        float: left;
+    }
+    .hourly {
+        display: inline-block;
+        width: 400px;
+        height: 400px;
+    }
+    .daily {
+        display: inline-block;
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: $break-medium) {
+    #main {
+        height: 100vh
+    }
+    #weather-container {
+        display: flex;
+        align-items: stretch;
+    }
+    #content {
+        flex: 2 0px;
+        order: 2;
+        height: 80vh;
+        margin-top: 10px;
+        background-color: $element-bgc;
+    }
+    #hourly {
+        order: 1;
+        height: 80vh;
+        margin-top: 10px;
+        background-color: $element-bgc;
+    }
+    #daily {
+        order: 3;
+        height: 80vh;
+        margin-top: 10px;
+        background-color: $element-bgc;
+    }
+    .hourly {
+        display: block;
+        height: 20vh;
+    }
+    .daily {
+        display: block;
+        height: 20vh;
+    }
+}
+
+@media screen and (min-width: $break-large) {
+    #main {
+        height: 100vh
+    }
+    #weather-container {
+        display: flex;
+        align-items: stretch;
+    }
+    #content {
+        width: 40%;
+        order: 2;
+        height: 80vh;
+        margin-top: 10px;
+        background-color: $element-bgc;
+    }
+    #hourly {
+        width: 30%;
+        order: 1;
+        height: 80vh;
+        margin-top: 10px;
+        overflow-y: scroll;
+        background-color: $element-bgc;
+    }
+    #daily {
+        width: 30%;
+        order: 3;
+        height: 80vh;
+        margin-top: 10px;
+        overflow-y: scroll;
+        background-color: $element-bgc;
+    }
+    .hourly {
+        display: block;
+        height: 20vh;
+        width: 100%;
+    }
+    .daily {
+        display: block;
+        height: 20vh;
+        width: 100%;
+    }
+}
