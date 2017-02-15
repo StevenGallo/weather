@@ -18,14 +18,14 @@ $element-bgc: #bbb;
 
 @media screen and (min-width: $break-small) {
     #main {
-        font-size: 2rem;
+        font-size: 4rem;
         height: 100vh;
         width: 100%;
         background-color: black;
         font-family: 'Roboto Condensed', sans-serif;
     }
     #cur-temp {
-        font-size: 15rem;
+        font-size: 20rem;
     }
     #content {
         height: 40vh;
@@ -39,7 +39,7 @@ $element-bgc: #bbb;
         background-color: $element-bgc;
         overflow-y: hidden;
         overflow-x: scroll;
-        white-space: nowrap;
+        // white-space: nowrap;
         float: left;
     }
     #daily {
@@ -49,7 +49,7 @@ $element-bgc: #bbb;
         background-color: $element-bgc;
         overflow-y: hidden;
         overflow-x: scroll;
-        white-space: nowrap;
+        // white-space: nowrap;
         float: left;
     }
     .hourly {
