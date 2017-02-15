@@ -32,7 +32,6 @@
     white-space: nowrap;
     float: left; }
   #daily {
-    font-size: 1.5rem;
     height: 400px;
     width: 100%;
     margin-top: 10px;
@@ -42,7 +41,6 @@
     white-space: nowrap;
     float: left; }
   .hourly {
-    font-size: 1.5rem;
     display: inline-block;
     width: 400px;
     height: 400px; }
@@ -51,6 +49,7 @@
     width: 400px;
     height: 400px; }
   .wrap {
+    white-space: normal;
     width: 400px; } }
 
 @media screen and (max-width: 768px) {
