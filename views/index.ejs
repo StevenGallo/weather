@@ -34,7 +34,7 @@
             <% hourly.data.forEach((hour)=> { %>
               <div class="hourly">
                 <div><%= moment.unix(hour.time).calendar() %></div>
-                <div><%= hour.summary %></div>
+                <div class="wrap"><%= hour.summary %></div>
                 <div><%= hour.temperature %></div>
                 <div>Chance of <%if (hour.precipType) {%>
                                 <span><%=hour.precipType%></span>
@@ -49,7 +49,7 @@
             <% daily.data.forEach((day)=> { %>
               <div class="daily">
                 <div><%= moment.unix(day.time).format('dddd') %></div>
-                <div><%= day.summary %></div>
+                <div class="wrap"><%= day.summary %></div>
                 <div>Low: <%= day.temperatureMin %>&degF</div>
                 <div>High: <%= day.temperatureMax %>&degF</div>
                 <div>Chance of <%if (day.precipType) {%>

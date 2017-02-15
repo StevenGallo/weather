@@ -39,7 +39,7 @@ $element-bgc: #bbb;
         background-color: $element-bgc;
         overflow-y: hidden;
         overflow-x: scroll;
-        // white-space: nowrap;
+        white-space: nowrap;
         float: left;
     }
     #daily {
@@ -49,8 +49,11 @@ $element-bgc: #bbb;
         background-color: $element-bgc;
         overflow-y: hidden;
         overflow-x: scroll;
-        // white-space: nowrap;
+        white-space: nowrap;
         float: left;
+    }
+    .wrap {
+        white-space: wrap;
     }
     .hourly {
         display: inline-block;
