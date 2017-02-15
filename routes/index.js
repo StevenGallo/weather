@@ -16,7 +16,6 @@ router.get('/', helpers.getLocation, (req, res, next) => {
             })
         }).catch((err) => { console.log(err) })
 });
-
 router.post('/search', helpers.getAddLocation, (req, res, next) => {
     res.redirect('/')
         .catch((err) => { console.log(err) })
