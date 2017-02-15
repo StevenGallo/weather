@@ -41,6 +41,7 @@ $element-bgc: #bbb;
         overflow-x: scroll;
         white-space: nowrap;
         float: left;
+        flex-wrap: wrap;
     }
     #daily {
         height: 400px;
@@ -51,9 +52,7 @@ $element-bgc: #bbb;
         overflow-x: scroll;
         white-space: nowrap;
         float: left;
-    }
-    .wrap {
-        white-space: wrap;
+        flex-wrap: wrap;
     }
     .hourly {
         display: inline-block;
