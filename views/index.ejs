@@ -20,14 +20,15 @@
          </nav>
          <div id="weather-container">
             <div id="content">
-            <div><%= current.summary %></div>
-            <div id="cur-temp"><%= current.temperature %>&degF</div>
-             <div>Chance of <%if (current.precipType) {%>
+              <div>Current weather for <%= location %></div>
+              <div><%= current.summary %></div>
+              <div id="cur-temp"><%= current.temperature %>&degF</div>
+              <div>Chance of <%if (current.precipType) {%>
                                 <span><%=current.precipType%></span>
                                   <% } else{ %>  
                                 <span>percipitation</span>
                                   <% }%>
-                                : <%= Math.floor(100*current.precipProbability) %>%</div>
+                                : <%= Math.floor(100*current.precipProbability) %>%</div>        
             </div>
             <div id="hourly">
             <% hourly.data.forEach((hour)=> { %>
