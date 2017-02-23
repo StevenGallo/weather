@@ -8,8 +8,8 @@ function getLocation(req, res, next) {
             res.locals.longitude = gRes.data.location.lng
             return next()
         }).catch((err) => {
-            res.locals.latitude = '40.7411155'
-            res.locals.longitude = '-73.9893962'
+            res.locals.latitude = '34.0522'
+            res.locals.longitude = '118.2437'
             return next()
         })
 }
